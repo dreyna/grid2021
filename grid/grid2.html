@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/modernizr-custom.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        #container{/*fr*/
+            display: grid;
+            width: 80%;
+            height: 50%;
+            grid-template-areas: "header header"
+                                 "nav nav"
+                                 "aside section"
+                                 "footer footer";
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+            grid-template-rows: 100px 50px 200px 50px;
+
+            margin: 0 auto;
+            
+        }
+        .header{
+            grid-area: header;
+            background-color: blueviolet;
+        }
+        .nav{
+            grid-area: nav;
+            background-color: rgb(226, 110, 43);
+        }
+        .aside{
+            grid-area: aside;
+            background-color: rgb(211, 19, 179);
+            color: white;
+            font-size: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .section{
+            grid-area: section;
+            background-color: rgb(9, 231, 120);
+        }
+        .footer{
+            grid-area: footer;
+            background-color: rgb(231, 227, 9);
+        }
+        .imagen{
+            width: 100%;
+            max-width: 100%;
+            height: 100px;
+        }
+        @media (max-width:200px) {
+            .aside{
+               font-size: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <img src="imagenes/img.jpg" alt="" class="imagen" width="200">
+        </div>
+        <div class="nav">2</div>
+        <div class="aside">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nobis fugit temporibus nihil architecto nostrum voluptatem eaque cumque a tempora illum deserunt reiciendis corrupti tenetur neque non, commodi officia quae.
+        </div>
+        <div class="section">4</div>
+        <div class="footer">8</div>
+    </div>
+</body>
+</html>
